@@ -1,14 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import App from "./App";
+import Homepage from "./pages/Homepage";
+import AddACharacterPage from "./pages/AddACharacterPage";
+import AllCharactersPage from "./pages/AllCharactersPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Homepage />,
+  },
+  {
+    path: "/add",
+    element: <AddACharacterPage />,
+  },
+  {
+    path: "/characters",
+    element: <AllCharactersPage />,
   },
 ]);
 
