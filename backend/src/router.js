@@ -7,16 +7,22 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Import itemControllers module for handling item-related operations
-const itemControllers = require("./controllers/itemControllers");
+const CharacterControllers = require("./controllers/CharacterControllers");
 
 // Route to get a list of items
-router.get("/items", itemControllers.browse);
+router.get("/character", CharacterControllers.browse);
 
 // Route to get a specific item by ID
-router.get("/items/:id", itemControllers.read);
+router.get("/character/:id", CharacterControllers.read);
 
 // Route to add a new item
-router.post("/items", itemControllers.add);
+router.post("/character", CharacterControllers.add);
+
+// Route to update items
+router.put("/character/:id", CharacterControllers.update);
+
+// Route to delete items
+router.delete("/character/:id", CharacterControllers.destroy);
 
 /* ************************************************************************* */
 
