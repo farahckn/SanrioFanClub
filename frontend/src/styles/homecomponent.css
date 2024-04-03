@@ -1,0 +1,41 @@
+section {
+  float: right;
+  margin-right: 10rem;
+  margin-top: 3rem;
+}
+
+section > .HomeMessage {
+  background-color: #faa7d1;
+  width: 25rem;
+  height: 10rem;
+  margin-bottom: 20px;
+  border-color: #000000;
+}
+
+section > .register {
+  background-color: #faa7d1;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  height: 15rem;
+}
+
+section > .register > h2 {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+section > .register > input {
+  width: 20rem;
+  margin-left: 2rem;
+}
+
+section > .register > label {
+  margin-top: 1rem;
+}
+
+section > .register > button {
+  width: 5rem;
+  margin-top: 2rem;
+}

@@ -1,0 +1,19 @@
+nav {
+  background-color: #f54a99;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav > ul > li {
+  display: inline;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 10px;
+  display: block;
+}

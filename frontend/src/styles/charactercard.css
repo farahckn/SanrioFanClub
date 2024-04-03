@@ -1,0 +1,14 @@
+div > button {
+  display: flex;
+  left: 3rem;
+}
+
+div > .character-card {
+  background-color: #faa7d1;
+  height: 22rem;
+  width: 17rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}

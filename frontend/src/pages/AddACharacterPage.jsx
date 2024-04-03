@@ -1,7 +1,13 @@
-import React from "react";
+import NewCharacter from "../components/NewCharacter";
+import NavBar from "../components/NavBar";
 
 function AddACharacterPage() {
-  return <div>Add a Sanrio Character</div>;
+  return (
+    <div>
+      <NavBar />
+      <NewCharacter />
+    </div>
+  );
 }
 
 export default AddACharacterPage;
