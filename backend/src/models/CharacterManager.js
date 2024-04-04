@@ -20,8 +20,9 @@ class CharacterManager extends AbstractManager {
 
   async create(character) {
     const [rows] = await this.database.query(
-      `INSERT INTO ${this.table} (full_name, alternate_name, japanese_name, birthday, likes_hobbies) VALUES (?, ?, ?, ?, ?)`,
+      `INSERT INTO ${this.table} (img, full_name, alternate_name, japanese_name, birthday, likes_hobbies) VALUES (?, ?, ?, ?, ?, ?)`,
       [
+        character.img,
         character.full_name,
         character.alternate_name,
         character.japanese_name,
@@ -34,8 +35,9 @@ class CharacterManager extends AbstractManager {
 
   async updateCharacter(character) {
     const [rows] = await this.database.query(
-      `UPDATE ${this.table} SET full_name=?, alternate_name=?, japanese_name=?, birthday=?, likes_hobbies=? WHERE id=?`,
+      `UPDATE ${this.table} SET img=?, full_name=?, alternate_name=?, japanese_name=?, birthday=?, likes_hobbies=? WHERE id=?`,
       [
+        character.img,
         character.full_name,
         character.alternate_name,
         character.japanese_name,

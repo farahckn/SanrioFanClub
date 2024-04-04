@@ -21,6 +21,7 @@ const read = async (req, res, next) => {
 
 const add = async (req, res, next) => {
   const sanrioInfos = {
+    img: req.body.img,
     full_name: req.body.full_name,
     alternate_name: req.body.alternate_name,
     japanese_name: req.body.japanese_name,
@@ -42,6 +43,7 @@ const add = async (req, res, next) => {
 
 const update = async (req, res, next) => {
   const sanrioInfos = {
+    img: req.body.img,
     full_name: req.body.full_name,
     alternate_name: req.body.alternate_name,
     japanese_name: req.body.japanese_name,

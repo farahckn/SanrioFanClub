@@ -1,70 +1,107 @@
-import "../styles/addacharacter.css";
+import { useState } from "react";
+import axios from "axios";
+import "../styles/addmodifyacharacter.css";
 
 function NewCharacter() {
+  const [form, setForm] = useState({
+    img: "",
+    full_name: "",
+    alternate_name: "",
+    japanese_name: "",
+    birthday: "",
+    likes_hobbies: "",
+    id: 1,
+  });
+
+  const handleChange = (event) => {
+    setForm({
+      ...form,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const submitCharacter = (event) => {
+    event.preventDefault();
+    axios
+      .post("http://localhost:3310/api/character/", form)
+      .then((response) => console.info(response))
+      .catch((err) => console.error(err));
+  };
+
   return (
-    <form>
+    <form onSubmit={submitCharacter}>
       <h1>Add a character</h1>
-      <div>
-        <input type="file" id="imageInput" accept="image/*" />
-        <button type="button">Add a picture</button>
-        <div className="FullName">
+      <div className="picture">
+        <label htmlFor="picture">URL of your favorite picture</label>
+        <input
+          type="text"
+          name="img"
+          id="pic"
+          value={form.img}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div className="names">
+        <div className="full_name">
           <label htmlFor="fullName">Full Name</label>
           <input
             type="text"
-            name="fullName"
+            name="full_name"
             id="fullName"
-            // value={formData.fullName}
-            // onChange={handleChange}
+            value={form.full_name}
+            onChange={handleChange}
             required
           />
         </div>
 
-        <div className="AlternateName">
+        <div className="alternate_name">
           <label htmlFor="alternateName">Alternate Name</label>
           <input
             type="text"
-            name="alternateName"
+            name="alternate_name"
             id="alternateName"
-            // value={formData.alternateName}
-            // onChange={handleChange}
+            value={form.alternate_name}
+            onChange={handleChange}
           />
         </div>
 
-        <div className="JapaneseName">
+        <div className="japanese_name">
           <label htmlFor="japaneseName">Japanese Name</label>
           <input
             type="text"
-            name="japaneseName"
+            name="japanese_name"
             id="japaneseName"
-            // value={formData.japaneseName}
-            // onChange={handleChange}
+            value={form.japanese_name}
+            onChange={handleChange}
           />
         </div>
-
-        <div className="Birthday">
+      </div>
+      <div className="other">
+        <div className="birthday">
           <label htmlFor="birthday">Birthday</label>
           <input
             type="text"
             name="birthday"
             id="birthday"
-            // value={formData.birthday}
-            // onChange={handleChange}
+            value={form.birthday}
+            onChange={handleChange}
           />
         </div>
 
-        <div className="HobbiesLikes">
+        <div className="hobbies_likes">
           <label htmlFor="likesHobbies">Likes and Hobbies</label>
           <input
             type="text"
-            name="likesHobbies"
+            name="likes_hobbies"
             id="likesHobbies"
-            // value={formData.likesHobbies}
-            // onChange={handleChange}
+            value={form.likes_hobbies}
+            onChange={handleChange}
           />
         </div>
-
-        <button type="submit">Add</button>
       </div>
+      <button type="submit">Add</button>
     </form>
   );
 }

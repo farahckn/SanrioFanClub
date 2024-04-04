@@ -1,0 +1,38 @@
+form > h1 {
+  text-align: center;
+}
+
+form {
+  background-color: #faa7d1;
+  height: 55rem;
+  width: 82rem;
+  margin-left: 3rem;
+  margin-right: 4rem;
+}
+
+form > .picture {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+form > .names {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
+}
+
+form > .other {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
+}
+
+form > .other > .hobbies_likes {
+  display: flex;
+}
+
+form > .other > .hobbies_likes > input {
+  width: 15rem;
+  height: 10rem;
+}

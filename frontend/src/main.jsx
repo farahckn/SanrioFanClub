@@ -6,6 +6,7 @@ import Homepage from "./pages/Homepage";
 import AddACharacterPage from "./pages/AddACharacterPage";
 import AllCharactersPage from "./pages/AllCharactersPage";
 import SignUp from "./pages/SignUp";
+import ModifyCharacter from "./pages/ModifyPage";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUp />,
+  },
+  {
+    path: "/modify/:id",
+    element: <ModifyCharacter />,
   },
 ]);
 
