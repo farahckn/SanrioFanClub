@@ -5,25 +5,39 @@ section {
 }
 
 section > .HomeMessage {
-  background-color: #faa7d1;
+  background-color: var(--secondary-color);
+  font-family: var(--secondary-font-family);
   width: 25rem;
-  height: 10rem;
-  margin-bottom: 20px;
+  height: 13rem;
+  margin-bottom: 25px;
+  margin-top: 2rem;
   border-color: #000000;
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid black;
+}
+
+section > .HomeMessage > h1 {
+  font-family: var(--primary-font-family);
+  font-weight: lighter;
 }
 
 section > .register {
-  background-color: #faa7d1;
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   width: 25rem;
   height: 15rem;
+  font-family: var(--secondary-font-family);
+  padding: 1rem;
+  border: 1px solid black;
 }
 
 section > .register > h2 {
   text-align: center;
-  margin-top: 0.5rem;
   margin-bottom: 0;
+  font-family: var(--primary-font-family);
+  font-weight: lighter;
 }
 
 section > .register > input {
@@ -33,9 +47,12 @@ section > .register > input {
 
 section > .register > label {
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 section > .register > button {
   width: 5rem;
-  margin-top: 2rem;
+  height: 2rem;
+  margin: 2rem auto 0;
+  font-family: var(--secondary-font-family);
 }

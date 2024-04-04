@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "../components/CharacterCard";
-import NavBar from "../components/NavBar";
+import "../styles/characterspage.css";
 
 function AllCharactersPage() {
   const [characters, setCharacter] = useState([]);
@@ -21,10 +21,11 @@ function AllCharactersPage() {
 
   return (
     <div>
-      <NavBar />
-      {characters.map((character) => (
-        <CharacterCard data={character} />
-      ))}
+      <div className="character_card_container">
+        {characters.map((character) => (
+          <CharacterCard data={character} />
+        ))}
+      </div>
     </div>
   );
 }

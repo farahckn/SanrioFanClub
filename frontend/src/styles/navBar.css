@@ -1,5 +1,6 @@
 nav {
   background-color: #f54a99;
+  height: 3rem;
 }
 
 nav > ul {
@@ -14,6 +15,7 @@ nav > ul > li {
 nav > ul > li > a {
   text-decoration: none;
   color: var(--text-color);
+  font-family: var(--secondary-font-family);
   padding: 10px;
   display: block;
 }

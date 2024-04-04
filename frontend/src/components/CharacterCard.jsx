@@ -17,10 +17,12 @@ function CharacterCard({ data }) {
     <div className="character-card">
       <img src={data.img} alt={data.full_name} />
       <h2>{data.full_name}</h2>
-      <p>Alternate Name: {data.alternate_name}</p>
-      <p>Japanese Name: {data.japanese_name} </p>
-      <p>Birthday: {data.birthday}</p>
-      <p>Likes and Hobbies: {data.likes_hobbies}</p>
+      <div className="text">
+        <p>Alternate Name: {data.alternate_name}</p>
+        <p>Japanese Name: {data.japanese_name} </p>
+        <p>Birthday: {data.birthday}</p>
+        <p>Likes and Hobbies: {data.likes_hobbies}</p>
+      </div>
       <div>
         <Link to={`/modify/${data.id}`}>
           <button type="button">Modify a character</button>

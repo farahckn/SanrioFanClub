@@ -7,27 +7,33 @@ import AddACharacterPage from "./pages/AddACharacterPage";
 import AllCharactersPage from "./pages/AllCharactersPage";
 import SignUp from "./pages/SignUp";
 import ModifyCharacter from "./pages/ModifyPage";
+import App from "./App";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Homepage />,
-  },
-  {
-    path: "/add",
-    element: <AddACharacterPage />,
-  },
-  {
-    path: "/characters",
-    element: <AllCharactersPage />,
-  },
-  {
-    path: "/signup",
-    element: <SignUp />,
-  },
-  {
-    path: "/modify/:id",
-    element: <ModifyCharacter />,
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Homepage />,
+      },
+      {
+        path: "/add",
+        element: <AddACharacterPage />,
+      },
+      {
+        path: "/characters",
+        element: <AllCharactersPage />,
+      },
+      {
+        path: "/signup",
+        element: <SignUp />,
+      },
+      {
+        path: "/modify/:id",
+        element: <ModifyCharacter />,
+      },
+    ],
   },
 ]);
 

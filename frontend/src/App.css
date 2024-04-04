@@ -4,10 +4,11 @@
   --primary-font-family: "Lily Script One", sans-serif;
   --secondary-font-family: "Inconsolata", sans-serif;
 
-  --primary-background-color: #f54a99;
-  --secondary-background-color: #faa7d1;
+  --primary-background: #f54a99;
+  --secondary-color: #faa7d1;
   --text-color: #000000;
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
