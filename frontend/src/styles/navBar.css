@@ -1,11 +1,14 @@
 nav {
   background-color: #f54a99;
   height: 3rem;
+  border: 1px solid black;
 }
 
 nav > ul {
   list-style-type: none;
   display: flex;
+  margin-left: 2rem;
+  margin-top: 0.2rem;
 }
 
 nav > ul > li {

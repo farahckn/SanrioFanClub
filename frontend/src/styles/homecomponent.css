@@ -10,7 +10,7 @@ section > .HomeMessage {
   width: 25rem;
   height: 13rem;
   margin-bottom: 25px;
-  margin-top: 2rem;
+  margin-top: 5rem;
   border-color: #000000;
   text-align: center;
   padding: 1.5rem;
@@ -20,6 +20,7 @@ section > .HomeMessage {
 section > .HomeMessage > h1 {
   font-family: var(--primary-font-family);
   font-weight: lighter;
+  margin-top: 0;
 }
 
 section > .register {

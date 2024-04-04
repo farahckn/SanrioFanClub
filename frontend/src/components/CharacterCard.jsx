@@ -23,7 +23,7 @@ function CharacterCard({ data }) {
         <p>Birthday: {data.birthday}</p>
         <p>Likes and Hobbies: {data.likes_hobbies}</p>
       </div>
-      <div>
+      <div className="buttons">
         <Link to={`/modify/${data.id}`}>
           <button type="button">Modify a character</button>
         </Link>

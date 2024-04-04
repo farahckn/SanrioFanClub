@@ -21,6 +21,7 @@ function AllCharactersPage() {
 
   return (
     <div>
+      <h1>All Sanrio Characters</h1>
       <div className="character_card_container">
         {characters.map((character) => (
           <CharacterCard data={character} />

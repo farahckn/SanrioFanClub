@@ -2,3 +2,10 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: var(--primary-font-family);
+  font-weight: lighter;
+}

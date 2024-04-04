@@ -20,6 +20,8 @@
   text-align: center;
   margin: 0;
   margin-top: 1rem;
+  font-family: var(--primary-font-family);
+  font-weight: lighter;
 }
 
 .character-card > .text {
@@ -27,4 +29,5 @@
   margin: auto;
   padding-bottom: 3rem;
   text-align: center;
+  font-family: var(--secondary-font-family);
 }
